@@ -4,7 +4,7 @@
     <title>Formulario de registro</title>
 </head>
 <body>
-<!-- Se hace un formulario de HTML normal -->
+
 <h1>Formulario para registro de usuarios.</h1>
 <form action="registro" method="post">
     <table style="with: 50%">

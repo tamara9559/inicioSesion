@@ -68,5 +68,12 @@ public class usuario {
     public usuario() {
     }
 
-
+    @Override
+    public String toString() {
+        return "tus datos son: " +
+                "nombres: " + nombres + '\n' +
+                ", apellidos: " + apellidos + '\n' +
+                ", Direccion: " + Direccion + '\n' +
+                ", movil: " + movil ;
+    }
 }

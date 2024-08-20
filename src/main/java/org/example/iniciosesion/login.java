@@ -10,12 +10,11 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 @WebServlet(value = "/login")
-// Aquí estamos tomando el servlet login que extiende HttpServlet.
+
 public class login extends HttpServlet {
 
-    // Aquí estamos usando doPost() método como en el formulario que estamos usando el método POST.
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        // Se toman parámetros utilizando el objeto de solicitud, es decir, nombre de usuario y contraseña.
 
         String usuariO = request.getParameter("textUsuario");
         String clave = request.getParameter("passClave");
@@ -27,11 +26,14 @@ public class login extends HttpServlet {
         boolean validarCl = usurioSe.getClave().equals(clave);
 
 
-        // Si los campos están vacíos se solicitan de nuevo
         if (validarUsu && validarCl ){
+            String nombreusu = usurioSe.getUsuario();
+            String mensaje = usurioSe.toString();
+            request.setAttribute("nombreU", nombreusu);
+            request.setAttribute("mensaje",mensaje);
             RequestDispatcher req=request.getRequestDispatcher("login_correcto.jsp");
             req.forward(request,response);
-            request.setAttribute("nombreUsuario", usurioSe);
+
         }else {
             RequestDispatcher req=request.getRequestDispatcher("inicio_login.jsp");
             req.include(request,response);

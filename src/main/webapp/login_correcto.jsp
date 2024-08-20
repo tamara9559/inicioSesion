@@ -9,15 +9,24 @@
 <table style="with: 50%">
     <tr>
         <td>
-            <!-- Se toman ls valores que viene y se asignan a una variable -->
-            <% usuario nombreUs = (usuario) request.getAttribute("nombreUsuario");%>
-            <!-- Se concatena HTML con codigo Java -->
-            <a>Bienvenid@   <%=nombreUs.getUsuario() %> Su inicio de sesión es correcto!!!.</a>
+            <% String nombreUs = (String) request.getAttribute("nombreU");%>
+            <% String textMayus = nombreUs.toUpperCase();%>
+            <a> Bienvenido  <%= textMayus %> Su inicio de sesión es correcto!!!.</a>
+
+        </td>
+
+        <td>
+            <br>
+            <% String mensajeUs = (String) request.getAttribute("mensaje");%>
+            <% String menMayus = mensajeUs.toUpperCase();%>
+
+            <a> <%= menMayus %></a >
+
         </td>
     </tr>
     <tr></tr>
     <tr><td>
-        <a href="inicio_login.jsp"><b>Cerrar sesión</b></a>
+        <a href="index.jsp"><b>Cerrar sesión</b></a>
     </td>
     </tr>
 </table>
