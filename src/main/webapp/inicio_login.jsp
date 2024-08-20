@@ -8,11 +8,11 @@
     <table style="with: 50%">
         <tr>
             <td>Usuario:</td>
-            <td><input type="text" name="usuario" /></td>
+            <td><input type="text" name="textUsuario" id="textUsuario"/></td>
         </tr>
         <tr>
             <td>Clave:</td>
-            <td><input type="password" name="clave" /></td>
+            <td><input type="password" name="passClave" id="passClave"/></td>
         </tr>
     </table>
     <input type="submit" value="Iniciar" /></form>

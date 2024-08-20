@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td>Apellidos:</td>
-            <td><input type="text" name="taxtApellidos" id="textApellidos"/></td>
+            <td><input type="text" name="textApellidos" id="textApellidos"/></td>
         </tr>
         <tr>
             <td>Usuario:</td>

@@ -1,3 +1,4 @@
+<%@ page import="org.example.iniciosesion.usuario" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,9 +10,9 @@
     <tr>
         <td>
             <!-- Se toman ls valores que viene y se asignan a una variable -->
-            <% String usuario = request.getParameter("usuario"); %>
+            <% usuario nombreUs = (usuario) request.getAttribute("nombreUsuario");%>
             <!-- Se concatena HTML con codigo Java -->
-            <a>Bienvenid@   <%=usuario %> Su inicio de sesión es correcto!!!.</a>
+            <a>Bienvenid@   <%=nombreUs.getUsuario() %> Su inicio de sesión es correcto!!!.</a>
         </td>
     </tr>
     <tr></tr>
